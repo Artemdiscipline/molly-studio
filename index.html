@@ -25,8 +25,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400&family=Manrope:wght@400;500;600;700&display=swap">
-  <link rel="preload" as="image" href="assets/hero-560.jpg" imagesrcset="assets/hero-560.jpg 560w, assets/hero-880.jpg 880w" imagesizes="(min-width: 720px) 45vw, 100vw">
+  <!-- шрифты грузятся без блокировки отрисовки: до их прихода текст виден системным шрифтом -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400&family=Manrope:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400&family=Manrope:wght@400;500;600;700&display=swap"></noscript>
   <link rel="stylesheet" href="style.css">
   <script>document.documentElement.classList.add('js');</script>
 
@@ -108,18 +109,18 @@
           <a class="link-arrow" href="https://2gis.ru/lipetsk/gallery/firm/70000001057707807" target="_blank" rel="noopener">Все фото на 2ГИС →</a>
         </div>
         <ul class="works" data-source="2gis-gallery">
-          <li><a href="assets/works/work-01.jpg"><img src="assets/works/work-01-sq.jpg" width="480" height="480" loading="lazy" alt="Короткие ногти с абстрактным цветным дизайном: красный, жёлтый, синий"></a></li>
-          <li><a href="assets/works/work-02.jpg"><img src="assets/works/work-02-sq.jpg" width="480" height="480" loading="lazy" alt="Молочное покрытие с чёрными крапинками"></a></li>
-          <li><a href="assets/works/work-03.jpg"><img src="assets/works/work-03-sq.jpg" width="480" height="480" loading="lazy" alt="Педикюр: ярко-розовый дизайн в полоску «зебра»"></a></li>
-          <li><a href="assets/works/work-04.jpg"><img src="assets/works/work-04-sq.jpg" width="480" height="480" loading="lazy" alt="Зелёное глянцевое покрытие на ногтях миндальной формы"></a></li>
-          <li><a href="assets/works/work-05.jpg"><img src="assets/works/work-05-sq.jpg" width="480" height="480" loading="lazy" alt="Молочный френч на квадратных ногтях"></a></li>
-          <li><a href="assets/works/work-06.jpg"><img src="assets/works/work-06-sq.jpg" width="480" height="480" loading="lazy" alt="Оливково-серое покрытие и белые ногти с золотыми линиями"></a></li>
-          <li><a href="assets/works/work-07.jpg"><img src="assets/works/work-07-sq.jpg" width="480" height="480" loading="lazy" alt="Розовые ногти с белым френчем"></a></li>
-          <li><a href="assets/works/work-08.jpg"><img src="assets/works/work-08-sq.jpg" width="480" height="480" loading="lazy" alt="Педикюр: нюдовое покрытие с блёстками"></a></li>
-          <li><a href="assets/works/work-09.jpg"><img src="assets/works/work-09-sq.jpg" width="480" height="480" loading="lazy" alt="Длинные миндальные ногти: лиловое покрытие и пастельный дизайн"></a></li>
-          <li><a href="assets/works/work-10.jpg"><img src="assets/works/work-10-sq.jpg" width="480" height="480" loading="lazy" alt="Белое матовое покрытие с розовой точкой и полосой"></a></li>
-          <li><a href="assets/works/work-11.jpg"><img src="assets/works/work-11-sq.jpg" width="480" height="480" loading="lazy" alt="Длинные ногти с чёрным покрытием и блёстками"></a></li>
-          <li><a href="assets/works/work-12.jpg"><img src="assets/works/work-12-sq.jpg" width="480" height="480" loading="lazy" alt="Нюдовый френч на коротких ногтях"></a></li>
+          <li><a href="assets/works/work-01.jpg"><img src="assets/works/work-01-sq.jpg" width="480" height="480" loading="lazy" decoding="async" alt="Короткие ногти с абстрактным цветным дизайном: красный, жёлтый, синий"></a></li>
+          <li><a href="assets/works/work-02.jpg"><img src="assets/works/work-02-sq.jpg" width="480" height="480" loading="lazy" decoding="async" alt="Молочное покрытие с чёрными крапинками"></a></li>
+          <li><a href="assets/works/work-03.jpg"><img src="assets/works/work-03-sq.jpg" width="480" height="480" loading="lazy" decoding="async" alt="Педикюр: ярко-розовый дизайн в полоску «зебра»"></a></li>
+          <li><a href="assets/works/work-04.jpg"><img src="assets/works/work-04-sq.jpg" width="480" height="480" loading="lazy" decoding="async" alt="Зелёное глянцевое покрытие на ногтях миндальной формы"></a></li>
+          <li><a href="assets/works/work-05.jpg"><img src="assets/works/work-05-sq.jpg" width="480" height="480" loading="lazy" decoding="async" alt="Молочный френч на квадратных ногтях"></a></li>
+          <li><a href="assets/works/work-06.jpg"><img src="assets/works/work-06-sq.jpg" width="480" height="480" loading="lazy" decoding="async" alt="Оливково-серое покрытие и белые ногти с золотыми линиями"></a></li>
+          <li><a href="assets/works/work-07.jpg"><img src="assets/works/work-07-sq.jpg" width="480" height="480" loading="lazy" decoding="async" alt="Розовые ногти с белым френчем"></a></li>
+          <li><a href="assets/works/work-08.jpg"><img src="assets/works/work-08-sq.jpg" width="480" height="480" loading="lazy" decoding="async" alt="Педикюр: нюдовое покрытие с блёстками"></a></li>
+          <li><a href="assets/works/work-09.jpg"><img src="assets/works/work-09-sq.jpg" width="480" height="480" loading="lazy" decoding="async" alt="Длинные миндальные ногти: лиловое покрытие и пастельный дизайн"></a></li>
+          <li><a href="assets/works/work-10.jpg"><img src="assets/works/work-10-sq.jpg" width="480" height="480" loading="lazy" decoding="async" alt="Белое матовое покрытие с розовой точкой и полосой"></a></li>
+          <li><a href="assets/works/work-11.jpg"><img src="assets/works/work-11-sq.jpg" width="480" height="480" loading="lazy" decoding="async" alt="Длинные ногти с чёрным покрытием и блёстками"></a></li>
+          <li><a href="assets/works/work-12.jpg"><img src="assets/works/work-12-sq.jpg" width="480" height="480" loading="lazy" decoding="async" alt="Нюдовый френч на коротких ногтях"></a></li>
         </ul>
       </div>
     </section>
@@ -142,8 +143,8 @@
 
         <div class="price-groups" data-source="yclients 2026-09-27">
           <div class="price-col">
-          <section class="price-group price-group--1" aria-labelledby="pg-manicure">
-            <h3 id="pg-manicure">Маникюр</h3>
+          <details class="price-group price-group--1" open>
+            <summary><h3 id="pg-manicure">Маникюр</h3><span class="price-group__meta">6 услуг</span></summary>
             <ul class="price-list">
               <li><span class="name">Маникюр с покрытием, комплекс «Стандарт»</span><span class="time">1 ч 30 мин</span><span class="price">1 900 ₽</span></li>
               <li><span class="name">Маникюр с укреплением, комплекс</span><span class="time">2 ч</span><span class="price">2 200 ₽</span></li>
@@ -152,10 +153,10 @@
               <li><span class="name">Японский маникюр</span><span class="time">1 ч 30 мин</span><span class="price">1 500 ₽</span></li>
               <li><span class="name">Мужской маникюр</span><span class="time">1 ч</span><span class="price">1 200 ₽</span></li>
             </ul>
-          </section>
+          </details>
 
-          <section class="price-group price-group--3" aria-labelledby="pg-extension">
-            <h3 id="pg-extension">Наращивание</h3>
+          <details class="price-group price-group--3">
+            <summary><h3 id="pg-extension">Наращивание</h3><span class="price-group__meta">5 услуг</span></summary>
             <ul class="price-list">
               <li><span class="name">Наращивание ногтей</span><span class="time">3 ч</span><span class="price">2 700 ₽</span></li>
               <li><span class="name">Коррекция наращивания</span><span class="time">2 ч</span><span class="price">2 200 ₽</span></li>
@@ -163,7 +164,7 @@
               <li><span class="name">Ремонт одного ногтя</span><span class="time">10 мин</span><span class="price">150 ₽</span></li>
               <li><span class="name">Доплата за длину, за каждое деление начиная со второго</span><span class="price">200 ₽</span></li>
             </ul>
-          </section>
+          </details>
 
           <div class="price-extra price-group--5">
             <p>Маникюр и педикюр можно сделать одновременно, в четыре руки. Подарочные сертификаты на любую сумму.</p>
@@ -172,8 +173,8 @@
           </div>
 
           <div class="price-col">
-          <section class="price-group price-group--2" aria-labelledby="pg-pedicure">
-            <h3 id="pg-pedicure">Педикюр</h3>
+          <details class="price-group price-group--2">
+            <summary><h3 id="pg-pedicure">Педикюр</h3><span class="price-group__meta">8 услуг</span></summary>
             <ul class="price-list">
               <li><span class="name">Педикюр с покрытием, обработка стоп и пальцев</span><span class="time">1 ч 30 мин</span><span class="price">2 500 ₽</span></li>
               <li><span class="name">Педикюр с покрытием, без обработки стоп</span><span class="time">1 ч</span><span class="price">2 100 ₽</span></li>
@@ -184,10 +185,10 @@
               <li><span class="name">SPA-уход, парафин</span><span class="time">15 мин</span><span class="price">350 ₽</span></li>
               <li><span class="name">Ремонт ногтя, 1 шт.</span><span class="time">10 мин</span><span class="price">50 ₽</span></li>
             </ul>
-          </section>
+          </details>
 
-          <section class="price-group price-group--4" aria-labelledby="pg-design">
-            <h3 id="pg-design">Дизайн <small>за 1 ноготь</small></h3>
+          <details class="price-group price-group--4">
+            <summary><h3 id="pg-design">Дизайн</h3><span class="price-group__meta">за 1 ноготь</span></summary>
             <ul class="price-list">
               <li><span class="name">Дизайн</span><span class="price">100 ₽</span></li>
               <li><span class="name">Френч или лунки</span><span class="price">30 ₽</span></li>
@@ -197,9 +198,25 @@
               <li><span class="name">Топ с эффектом</span><span class="price">15 ₽</span></li>
               <li><span class="name">Стразы, за 1 шт.</span><span class="price">5 ₽</span></li>
             </ul>
-          </section>
+          </details>
           </div>
         </div>
+        <script>
+          (function () {
+            var mq = window.matchMedia('(min-width: 768px)');
+            var groups = document.querySelectorAll('details.price-group');
+            function sync() {
+              for (var i = 0; i < groups.length; i++) groups[i].open = mq.matches || i === 0;
+            }
+            sync();
+            if (mq.addEventListener) mq.addEventListener('change', sync); else mq.addListener(sync);
+            for (var j = 0; j < groups.length; j++) {
+              groups[j].querySelector('summary').addEventListener('click', function (e) {
+                if (mq.matches) e.preventDefault();
+              });
+            }
+          })();
+        </script>
       </div>
     </section>
 
@@ -277,12 +294,16 @@
         </div>
 
         <div class="map">
-          <iframe
-            src="https://www.openstreetmap.org/export/embed.html?bbox=39.5040%2C52.6026%2C39.5154%2C52.6070&amp;layer=mapnik&amp;marker=52.604821%2C39.509700"
-            title="Карта: Molly studio, Липецк, Политехническая улица, 1"
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen></iframe>
+          <!-- Живая карта грузится только по нажатию: так страница не тянет лишние скрипты и не перехватывает прокрутку -->
+          <a class="map__frame" id="map-frame"
+             href="https://www.openstreetmap.org/?mlat=52.604821&amp;mlon=39.509700#map=17/52.604821/39.509700"
+             data-embed="https://www.openstreetmap.org/export/embed.html?bbox=39.5040%2C52.6026%2C39.5154%2C52.6070&amp;layer=mapnik&amp;marker=52.604821%2C39.509700"
+             target="_blank" rel="noopener">
+            <img src="assets/map.jpg" width="1080" height="832" loading="lazy" decoding="async"
+                 alt="Карта района: Molly studio на Политехнической улице, 1, отмечена зелёной меткой">
+            <span class="map__hint">Открыть интерактивную карту</span>
+          </a>
+          <p class="map__credit">Карта © участники OpenStreetMap</p>
           <div class="map__links">
             <a class="link-arrow" href="https://2gis.ru/lipetsk/firm/70000001057707807" target="_blank" rel="noopener">Маршрут в 2ГИС →</a>
             <a class="link-arrow" href="https://yandex.ru/maps/?pt=39.509700,52.604821&amp;z=17&amp;l=map" target="_blank" rel="noopener">Яндекс Карты →</a>
@@ -345,14 +366,23 @@
       var count = document.getElementById('lb-count');
       var index = 0;
 
+      function full(i) {
+        return links[(i + links.length) % links.length].getAttribute('href');
+      }
+
       function show(i) {
         index = (i + links.length) % links.length;
+        var current = index;
         var thumb = links[index].querySelector('img');
-        img.src = links[index].getAttribute('href');
+        img.src = thumb.currentSrc || thumb.src; // превью уже в кэше — показываем мгновенно
         img.alt = thumb.alt;
         cap.textContent = thumb.alt;
         count.textContent = (index + 1) + ' / ' + links.length;
-        new Image().src = links[(index + 1) % links.length].getAttribute('href');
+        var big = new Image();
+        big.onload = function () { if (current === index) img.src = big.src; };
+        big.src = full(index);
+        new Image().src = full(index + 1);
+        new Image().src = full(index - 1);
       }
 
       links.forEach(function (a, i) {
@@ -387,6 +417,22 @@
         var dx = e.clientX - startX;
         if (Math.abs(dx) > 40) show(index + (dx < 0 ? 1 : -1));
         startX = null;
+      });
+    })();
+  </script>
+
+  <script>
+    (function () {
+      var frame = document.getElementById('map-frame');
+      if (!frame) return;
+      frame.addEventListener('click', function (e) {
+        e.preventDefault();
+        var iframe = document.createElement('iframe');
+        iframe.src = frame.getAttribute('data-embed');
+        iframe.title = 'Карта: Molly studio, Липецк, Политехническая улица, 1';
+        iframe.className = 'map__frame';
+        iframe.setAttribute('allowfullscreen', '');
+        frame.replaceWith(iframe);
       });
     })();
   </script>
