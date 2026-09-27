@@ -136,21 +136,24 @@
     </section>
 
     <!--
-      БЛОК «О СТУДИИ» — заготовка, пока скрыт: клиент ещё не прислал текст и фото мастеров.
-      Что вписать — см. TODO.md, раздел «Блок «О студии»».
-      Как включить:
-        1. Вписать текст студии в <p class="about__lead">.
-        2. Для каждого мастера раскомментировать карточку <li class="master"> (шаблон ниже),
-           положить фото в assets/masters/ и вписать имя и специализацию.
-        3. Убрать класс is-draft у <section id="about"> — блок появится.
+      БЛОК «О СТУДИИ». Текст собран только из проверенных фактов (бриф и описание сообщества ВК),
+      фото — раздел «Внутри» галереи 2ГИС. Когда студия пришлёт свой текст — заменить <p class="about__lead">.
+      Мастера пока скрыты (атрибут hidden у <ul class="masters">): нет данных от студии.
+      Как показать мастеров: раскомментировать шаблон <li class="master"> для каждого,
+      положить фото в assets/masters/, вписать имя и специализацию и убрать hidden у списка.
+      Скрыть весь блок: добавить класс is-draft к <section id="about">.
     -->
-    <section class="section about is-draft" id="about" aria-labelledby="about-title" data-todo="about">
+    <section class="section about" id="about" aria-labelledby="about-title">
       <div class="wrap about__grid">
         <div class="about__text">
           <h2 id="about-title">О студии</h2>
-          <p class="about__lead" data-todo="about-text"></p>
+          <p class="about__lead" data-source="brief, vk.com/molly_48">Molly studio — студия ногтевого сервиса на первом этаже дома 1 по&nbsp;Политехнической улице, в&nbsp;Университетском микрорайоне Липецка. Здесь делают маникюр, педикюр и наращивание ногтей гелем и акрилом, а маникюр с педикюром можно совместить и сделать в&nbsp;четыре руки.</p>
         </div>
-        <ul class="masters" aria-label="Мастера студии" data-todo="masters">
+        <div class="about__photos" data-source="2gis-gallery-inside">
+          <img src="assets/about/studio-reception.jpg" width="600" height="800" loading="lazy" decoding="async" alt="Ресепшен студии: белая стойка, логотип Molly на голубой стене">
+          <img src="assets/about/studio-lounge.jpg" width="600" height="800" loading="lazy" decoding="async" alt="Зона ожидания: синие кресла у стены в сиреневую полоску">
+        </div>
+        <ul class="masters" aria-label="Мастера студии" data-todo="masters" hidden>
           <!-- Шаблон карточки мастера (фото 600×600, JPEG ~75 %):
           <li class="master">
             <img class="master__photo" src="assets/masters/master-01.jpg" width="600" height="600" loading="lazy" decoding="async" alt="ИМЯ, мастер студии Molly">

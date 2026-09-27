@@ -358,8 +358,7 @@ main .section + .section { padding-top: 0; }
 
 /* ---------- О студии (заготовка) ---------- */
 
-/* Блок скрыт, пока клиент не прислал текст и фото мастеров.
-   Чтобы включить: убрать класс is-draft у <section id="about"> в index.html. */
+/* Чтобы скрыть блок целиком: добавить класс is-draft к <section id="about"> в index.html. */
 .about.is-draft { display: none; }
 
 .about__grid {
@@ -380,14 +379,30 @@ main .section + .section { padding-top: 0; }
   line-height: 1.35;
 }
 
+.about__photos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+.about__photos img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  background: var(--line);
+}
+
 .masters {
   display: grid;
+  grid-column: 1 / -1;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
+/* список мастеров скрыт атрибутом hidden, пока нет данных от студии */
+.masters[hidden] { display: none; }
 
 .master {
   display: grid;
@@ -415,11 +430,16 @@ main .section + .section { padding-top: 0; }
   .masters { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
+@media (min-width: 768px) {
+  .about__photos { gap: 12px; }
+}
+
 @media (min-width: 900px) {
   .about__grid {
     grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
     gap: 56px;
   }
+  .about__text { align-content: center; }
 }
 
 /* ---------- Услуги и цены ---------- */
