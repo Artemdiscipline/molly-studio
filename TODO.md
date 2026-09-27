@@ -7,13 +7,10 @@
 
 ## Обязательно до публикации
 
-- [ ] **Полные адреса в Open Graph.** Сейчас в `index.html` стоит
-  `og:image` с относительным путём `assets/og-image.jpg` — ВКонтакте и часть
-  мессенджеров такие ссылки не разворачивают. Когда будет домен:
-  - заменить `content="assets/og-image.jpg"` на `https://ДОМЕН/assets/og-image.jpg`;
-  - добавить `<meta property="og:url" content="https://ДОМЕН/">` и
-    `<link rel="canonical" href="https://ДОМЕН/">`;
-  - в блоке JSON-LD поменять `"image"` на полный адрес и добавить `"url"`.
+- [ ] **Свой домен.** Сайт опубликован на GitHub Pages:
+  https://artemdiscipline.github.io/molly-studio/ — полные адреса для превью ссылок уже прописаны.
+  Если студия купит домен, заменить `https://artemdiscipline.github.io/molly-studio/` на новый адрес в
+  `index.html`: `canonical`, `og:url`, `og:image` и `url`/`image` в JSON-LD.
 
 - [ ] **Расхождение цен YClients и ВКонтакте.** На сайте стоят цены из
   YClients (там же клиентки записываются). В закреплённом посте ВК «Новый

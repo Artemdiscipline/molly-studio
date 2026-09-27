@@ -14,9 +14,10 @@ https://n1778538.yclients.ru/ в новой вкладке. Своей форм�
 - Быстро: двойной клик по `index.html`.
 - Как на хостинге: в папке проекта выполнить
   `python -m http.server 8000` и открыть http://localhost:8000.
-- Публикация: залить содержимое папки на любой статический хостинг
-  (Timeweb, Beget, GitHub Pages, Netlify и т. п.). Перед этим — пункт
-  про Open Graph из `TODO.md`.
+- Опубликован на GitHub Pages: https://artemdiscipline.github.io/molly-studio/
+  (репозиторий https://github.com/Artemdiscipline/molly-studio, ветка
+  `main`, корень). Любой `git push` в `main` обновляет сайт за 1–2 минуты.
+- Переезд на другой хостинг или свой домен — см. пункт «Свой домен» в `TODO.md`.
 
 ## Структура
 
