@@ -534,6 +534,12 @@ main .section + .section { padding-top: 0; }
 
 /* ---------- Отзывы ---------- */
 
+.ratings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
 .rating {
   display: inline-flex;
   align-items: center;
