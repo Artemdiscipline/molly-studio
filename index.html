@@ -17,10 +17,15 @@
   <meta property="og:title" content="Molly studio — маникюр и педикюр в Липецке">
   <meta property="og:description" content="Студия ногтевого сервиса на Политехнической, 1. Ежедневно 9:00–21:00, запись онлайн.">
   <meta property="og:image" content="https://artemdiscipline.github.io/molly-studio/assets/og-image.jpg">
+  <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Логотип Molly и нюдовый френч на миндальных ногтях">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Molly studio — маникюр и педикюр в Липецке">
+  <meta name="twitter:description" content="Студия ногтевого сервиса на Политехнической, 1. Ежедневно 9:00–21:00, запись онлайн.">
+  <meta name="twitter:image" content="https://artemdiscipline.github.io/molly-studio/assets/og-image.jpg">
+  <meta name="twitter:image:alt" content="Логотип Molly и нюдовый френч на миндальных ногтях">
 
   <link rel="icon" href="favicon.ico" sizes="48x48">
   <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
@@ -129,21 +134,39 @@
       </div>
     </section>
 
+    <!--
+      БЛОК «О СТУДИИ» — заготовка, пока скрыт: клиент ещё не прислал текст и фото мастеров.
+      Что вписать — см. TODO.md, раздел «Блок «О студии»».
+      Как включить:
+        1. Вписать текст студии в <p class="about__lead">.
+        2. Для каждого мастера раскомментировать карточку <li class="master"> (шаблон ниже),
+           положить фото в assets/masters/ и вписать имя и специализацию.
+        3. Убрать класс is-draft у <section id="about"> — блок появится.
+    -->
+    <section class="section about is-draft" id="about" aria-labelledby="about-title" data-todo="about">
+      <div class="wrap about__grid">
+        <div class="about__text">
+          <h2 id="about-title">О студии</h2>
+          <p class="about__lead" data-todo="about-text"></p>
+        </div>
+        <ul class="masters" aria-label="Мастера студии" data-todo="masters">
+          <!-- Шаблон карточки мастера (фото 600×600, JPEG ~75 %):
+          <li class="master">
+            <img class="master__photo" src="assets/masters/master-01.jpg" width="600" height="600" loading="lazy" decoding="async" alt="ИМЯ, мастер студии Molly">
+            <p class="master__name">ИМЯ</p>
+            <p class="master__role">СПЕЦИАЛИЗАЦИЯ</p>
+          </li>
+          -->
+        </ul>
+      </div>
+    </section>
+
     <section class="section" id="prices" aria-labelledby="prices-title">
       <div class="wrap">
         <div class="section__head">
           <h2 id="prices-title">Услуги и цены</h2>
-          <p class="section__note">По данным онлайн-записи на 27&nbsp;сентября 2026</p>
+          <p class="section__note">По данным онлайн-записи на 27&nbsp;сентября&nbsp;2026</p>
         </div>
-
-        <ul class="services-tags" aria-label="Услуги студии">
-          <li>Аппаратный маникюр</li>
-          <li>Гель-лак</li>
-          <li>Наращивание гелем и акрилом</li>
-          <li>Женский педикюр</li>
-          <li>Мужской маникюр</li>
-          <li>Мужской педикюр</li>
-        </ul>
 
         <div class="price-groups" data-source="yclients 2026-09-27">
           <div class="price-col">
@@ -233,35 +256,23 @@
             <span class="rating__text">на 2ГИС, 33 отзыва<br><span>читать все →</span></span>
           </a>
         </div>
-        <ul class="reviews" data-source="2gis-reviews">
-          <li>
-            <figure class="review">
-              <blockquote cite="https://2gis.ru/lipetsk/firm/70000001057707807/tab/reviews">…маникюр, пожалуй, лучший из тех, что мне делали!</blockquote>
-              <figcaption>
-                <cite>Елена К.</cite>
-                <span class="meta"><span class="stars" aria-label="5 из 5">★★★★★</span> · февраль 2024</span>
-              </figcaption>
-            </figure>
-          </li>
-          <li>
-            <figure class="review">
-              <blockquote cite="https://2gis.ru/lipetsk/firm/70000001057707807/tab/reviews">С первого раза я нашла мастера в новом городе!</blockquote>
-              <figcaption>
-                <cite>Ena M., о педикюре</cite>
-                <span class="meta"><span class="stars" aria-label="5 из 5">★★★★★</span> · сентябрь 2023</span>
-              </figcaption>
-            </figure>
-          </li>
-          <li>
-            <figure class="review">
-              <blockquote cite="https://2gis.ru/lipetsk/firm/70000001057707807/tab/reviews">Всегда все чисто, аккуратно, вежливо и внимательно! Рекомендую!</blockquote>
-              <figcaption>
-                <cite>Alena S., о педикюре</cite>
-                <span class="meta"><span class="stars" aria-label="5 из 5">★★★★★</span> · октябрь 2022</span>
-              </figcaption>
-            </figure>
-          </li>
-        </ul>
+        <!--
+          МЕСТО ДЛЯ ОТЗЫВОВ (сейчас пусто, см. TODO.md, раздел «Отзывы»).
+          Когда появятся 3 свежих отзыва, вставить сюда список
+          (стили .reviews и .review уже есть в style.css):
+
+          <ul class="reviews" data-source="2gis-reviews">
+            <li>
+              <figure class="review">
+                <blockquote cite="https://2gis.ru/lipetsk/firm/70000001057707807/tab/reviews">ЦИТАТА — цельная фраза с начала предложения</blockquote>
+                <figcaption>
+                  <cite>ИМЯ И ПЕРВАЯ БУКВА ФАМИЛИИ, как на 2ГИС</cite>
+                  <span class="meta"><span class="stars" aria-label="5 из 5">★★★★★</span> · МЕСЯЦ ГОД</span>
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+        -->
       </div>
     </section>
   </main>
@@ -326,27 +337,6 @@
     <a class="btn btn-accent" href="https://n1778538.yclients.ru/" target="_blank" rel="noopener">Записаться</a>
   </div>
 
-  <dialog class="lightbox" id="lightbox" aria-label="Просмотр фото работы">
-    <div class="lightbox__bar">
-      <span id="lb-count">1 / 12</span>
-      <button class="icon-btn" type="button" data-lb="close" aria-label="Закрыть">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
-      </button>
-    </div>
-    <div class="lightbox__stage">
-      <img id="lb-img" src="" alt="">
-    </div>
-    <div class="lightbox__foot">
-      <button class="icon-btn" type="button" data-lb="prev" aria-label="Предыдущее фото">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
-      </button>
-      <p class="lightbox__caption" id="lb-caption"></p>
-      <button class="icon-btn" type="button" data-lb="next" aria-label="Следующее фото">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
-      </button>
-    </div>
-  </dialog>
-
   <script>
     (function () {
       var bar = document.getElementById('sticky-cta');
@@ -361,14 +351,39 @@
     })();
 
     (function () {
-      var dlg = document.getElementById('lightbox');
-      if (!dlg || typeof dlg.showModal !== 'function') return; // без поддержки <dialog> ссылки просто открывают фото
+      // Окно просмотра создаётся только при первом нажатии на фото:
+      // до этого в разметке нет ни счётчика, ни пустой картинки.
+      // Без поддержки <dialog> ссылки просто открывают фото.
+      if (typeof HTMLDialogElement !== 'function') return;
 
       var links = Array.prototype.slice.call(document.querySelectorAll('.works a'));
-      var img = document.getElementById('lb-img');
-      var cap = document.getElementById('lb-caption');
-      var count = document.getElementById('lb-count');
+      var dlg, img, cap, count;
       var index = 0;
+
+      var ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">';
+
+      function build() {
+        dlg = document.createElement('dialog');
+        dlg.className = 'lightbox';
+        dlg.setAttribute('aria-label', 'Просмотр фото работы');
+        dlg.innerHTML =
+          '<div class="lightbox__bar">' +
+            '<span class="lightbox__count"></span>' +
+            '<button class="icon-btn" type="button" data-lb="close" aria-label="Закрыть">' + ICON + '<path d="M6 6l12 12M18 6L6 18"/></svg></button>' +
+          '</div>' +
+          '<div class="lightbox__stage"></div>' +
+          '<div class="lightbox__foot">' +
+            '<button class="icon-btn" type="button" data-lb="prev" aria-label="Предыдущее фото">' + ICON + '<path d="M15 5l-7 7 7 7"/></svg></button>' +
+            '<p class="lightbox__caption"></p>' +
+            '<button class="icon-btn" type="button" data-lb="next" aria-label="Следующее фото">' + ICON + '<path d="M9 5l7 7-7 7"/></svg></button>' +
+          '</div>';
+        img = document.createElement('img');
+        dlg.querySelector('.lightbox__stage').appendChild(img);
+        cap = dlg.querySelector('.lightbox__caption');
+        count = dlg.querySelector('.lightbox__count');
+        document.body.appendChild(dlg);
+        bind();
+      }
 
       function full(i) {
         return links[(i + links.length) % links.length].getAttribute('href');
@@ -392,36 +407,39 @@
       links.forEach(function (a, i) {
         a.addEventListener('click', function (e) {
           e.preventDefault();
+          if (!dlg) build();
           show(i);
           dlg.showModal();
         });
       });
 
-      dlg.addEventListener('click', function (e) {
-        var action = e.target.closest('[data-lb]');
-        if (action) {
-          var type = action.getAttribute('data-lb');
-          if (type === 'close') dlg.close();
-          if (type === 'prev') show(index - 1);
-          if (type === 'next') show(index + 1);
-          return;
-        }
-        if (e.target === dlg || e.target.classList.contains('lightbox__stage')) dlg.close();
-      });
+      function bind() {
+        dlg.addEventListener('click', function (e) {
+          var action = e.target.closest('[data-lb]');
+          if (action) {
+            var type = action.getAttribute('data-lb');
+            if (type === 'close') dlg.close();
+            if (type === 'prev') show(index - 1);
+            if (type === 'next') show(index + 1);
+            return;
+          }
+          if (e.target === dlg || e.target.classList.contains('lightbox__stage')) dlg.close();
+        });
 
-      dlg.addEventListener('keydown', function (e) {
-        if (e.key === 'ArrowLeft') show(index - 1);
-        if (e.key === 'ArrowRight') show(index + 1);
-      });
+        dlg.addEventListener('keydown', function (e) {
+          if (e.key === 'ArrowLeft') show(index - 1);
+          if (e.key === 'ArrowRight') show(index + 1);
+        });
 
-      var startX = null;
-      img.addEventListener('pointerdown', function (e) { startX = e.clientX; });
-      img.addEventListener('pointerup', function (e) {
-        if (startX === null) return;
-        var dx = e.clientX - startX;
-        if (Math.abs(dx) > 40) show(index + (dx < 0 ? 1 : -1));
-        startX = null;
-      });
+        var startX = null;
+        img.addEventListener('pointerdown', function (e) { startX = e.clientX; });
+        img.addEventListener('pointerup', function (e) {
+          if (startX === null) return;
+          var dx = e.clientX - startX;
+          if (Math.abs(dx) > 40) show(index + (dx < 0 ? 1 : -1));
+          startX = null;
+        });
+      }
     })();
   </script>
 

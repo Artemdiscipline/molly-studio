@@ -302,6 +302,8 @@ main .section + .section { padding-top: 0; }
   font-size: clamp(2.2rem, 7vw, 3.4rem);
 }
 
+.section__head:last-child { margin-bottom: 0; }
+
 .section__note {
   color: var(--muted);
   font-size: 15px;
@@ -354,24 +356,73 @@ main .section + .section { padding-top: 0; }
   .works a { border-radius: var(--radius-md); }
 }
 
-/* ---------- Услуги и цены ---------- */
+/* ---------- О студии (заготовка) ---------- */
 
-.services-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 0 0 32px;
+/* Блок скрыт, пока клиент не прислал текст и фото мастеров.
+   Чтобы включить: убрать класс is-draft у <section id="about"> в index.html. */
+.about.is-draft { display: none; }
+
+.about__grid {
+  display: grid;
+  gap: 28px;
+}
+
+.about__text {
+  display: grid;
+  align-content: start;
+  gap: 18px;
+}
+.about__lead {
+  max-width: 34ch;
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 4vw, 1.6rem);
+  font-weight: 300;
+  line-height: 1.35;
+}
+
+.masters {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
-.services-tags li {
-  padding: 8px 14px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--surface);
-  font-size: 14px;
-  font-weight: 500;
+
+.master {
+  display: grid;
+  gap: 4px;
 }
+.master__photo {
+  width: 100%;
+  aspect-ratio: 1;
+  margin-bottom: 8px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  background: var(--line);
+}
+.master__name {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+.master__role {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+@media (min-width: 560px) {
+  .masters { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (min-width: 900px) {
+  .about__grid {
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+    gap: 56px;
+  }
+}
+
+/* ---------- Услуги и цены ---------- */
 
 .price-groups {
   display: flex;
@@ -704,6 +755,7 @@ main .section + .section { padding-top: 0; }
   color: var(--on-dark);
 }
 .lightbox::backdrop { background: var(--ink); }
+.lightbox:not([open]) { display: none; }
 .lightbox[open] {
   display: grid;
   grid-template-rows: auto minmax(0, 1fr) auto;
